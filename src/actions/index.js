@@ -13,11 +13,11 @@ export const FETCH_CHARS_START = "FETCH_CHARS_START";
 export const FETCH_CHARS_SUCCESS = "FETCH_CHARS_SUCCESS";
 export const FETCH_CHARS_FAILURE = "FETCH_CHARS_FAILURE";
 
-export const getPhoto = () => dispatch => {
+export const getCharacters = () => dispatch => {
     dispatch({ type: FETCH_CHARS_START });
     axios
         .get(
-            'https://api.nasa.gov/planetary/apod?api_key=PNkbbVZPDxLC8gApaHy0mZTvEqFBUvwjQ7ns0SuP'
+            "https://swapi.co/api/people"
         )
         .then(res => {
             console.log(res.data);
